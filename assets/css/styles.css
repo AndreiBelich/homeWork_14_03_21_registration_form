@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-text-color: rgb(119, 116, 116);
+  --primary-background-color: #F2F3F7;
+}
+
+body{
+  font-family: Arial, sans-serif;
+}
+
+.wrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(155,155,199,1) 53%, rgba(3,22,25,1) 100%); 
+  min-height: 100vh;
+}
+
+input{
+  border: 1px solid var(--primary-text-color);
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.registration-form{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-background-color);
+  padding: 15px 20px;
+}
+
+.form-title{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+
+.form-title::before, .form-title::after{
+  content: "";
+  width: 29%;
+  height: 3px;
+  background-color: crimson;
+  display: block;
+  position: absolute;
+ 
+}
+
+.form-title::before{
+  top: 0.9rem;
+}
+
+.form-title::after{
+  top: 0.9rem;
+  right: 0;
+}
+
+.form-describe{
+  color: var(--primary-text-color);
+  margin: 15px 0;
+}
+
+.user-full-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.raw-item{
+  max-width: 45%;
+}
+
+.submit-button{
+  background-color: green;
+  color: white;
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  outline: none;
+  text-transform: capitalize;
+  border: 1px solid green;
+  transition: all 1s ease-in-out;
+}
+
+.submit-button:hover{
+  background-color: lightgreen;
+  color: orangered;
+  transform: scale(1.05);
+}
+
+@media (max-width: 521px){
+  .registration-form{
+    max-width: 310px;
+  }
+
+  .user-full-name{
+    flex-direction: column;
+  }
+
+  .raw-item{
+    max-width: 100%;
+  }
+
+  .form-title::before, .form-title::after{
+    width: 20%;
+  }
+}
